@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Pilas!</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Pilas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" data-toggle="modal" data-target="#modalNovo">Fazer um
+                        lançamento</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#modalCategoria">Categorias</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-4">PILA$</h1>
+            <p class="lead">Nesta aplicação web você poderá gerenciar todos os seus pilas!</p>
+            <hr class="my-4">
+            <p>Registre aqui todos os pilas que você ganha e todos os pilas que você gasta, separe em quantas categorias
+                quiser.</p>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Data Hora</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Pilas</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">+</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>a</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAlterar">
+                                Alterar
+                            </button></td>
+                        <td><button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#modalExcluir">
+                                Excluir
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">-</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>a</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAlterar">
+                                Alterar
+                            </button></td>
+                        <td><button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#modalExcluir">
+                                Excluir
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">-</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>a</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAlterar">
+                                Alterar
+                            </button></td>
+                        <td><button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#modalExcluir">
+                                Excluir
+                            </button></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">+</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>a</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#modalAlterar">
+                                Alterar
+                            </button></td>
+                        <td><button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#modalExcluir">
+                                Excluir
+                            </button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAlterar" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Alterar Lançamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputAlterarDesc">Descrição</label>
+                            <input type="email" class="form-control" id="inputAlterarDesc"
+                                placeholder="Digite a descrição do lançamento">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputAlterarPilas">Pilas</label>
+                            <input type="email" class="form-control" id="inputAlterarPilas"
+                                placeholder="Quantos pilas?">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Remover lançamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="text-center">Certeza que deseja remover esse lançamento?</h1>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Nao...</button>
+                    <button type="button" class="btn btn-primary">Sim</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNovo" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Fazer um novo lançamento</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="form-group">
+                            <label for="selectCategoriasNovo">Categorias</label>
+                            <select class="form-control" id="selectCategoriasNovo">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="selectTipoNovo">Tipo</label>
+                            <select class="form-control" id="selectTipoNovo">
+                                <option>Ganhei Pilas</option>
+                                <option>Gastei Pilas</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputNovoDescricao">Descrição</label>
+                            <input type="text" class="form-control" id="inputNovoDescricao"
+                                placeholder="Digite a descrição do lançamento">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inputNovoPilas">Pilas</label>
+                            <input type="text" class="form-control" id="inputNovoPilas" placeholder="Digite os pilas">
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCategoria" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="TituloModalCentralizado">Categorias</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="inputCategoriaNova">Insira uma categoria</label>
+                            <input type="text" class="form-control" id="inputCategoriaNova" placeholder="Categoria">
+                            <hr>
+                            <button type="button" class="btn btn-primary">Adicionar</button>
+
+                        </div>
+                    </form>
+
+                    <table class="table table-sm">
+                        <tbody>
+                            <tr>
+                                <td class="text-center">Cat1</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Cat2</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Cat3</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">Cat4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
